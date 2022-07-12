@@ -49,21 +49,20 @@ for clients_k, clients_v in clients.items():
          print(f'\t esses são os dados comparando {clients_dadosk} = {clients_dadosv}')
 
 
-
 perguntas = {
     'perguntas1':{
-        'pergunta': 'Quanto que é 2*2',
+        'pergunta': 'Quanto que Ã© 2*2',
         'resposta': {
             'a':'1',
             'b':'2',
             'c':'4',
             'd':'5',
         },
-        'resposta_certa':'b',
+        'resposta_certa':'c',
     
     },
     'perguntas2':{
-        'pergunta': 'Quanto que é 3*2',
+        'pergunta': 'Quanto que Ã© 3*2',
         'resposta': {
             'a':'4',
             'b':'10',
@@ -76,9 +75,11 @@ perguntas = {
 for pk,pv in perguntas.items():
     print(f'{pk}:{pv["pergunta"]}')
     
-    print('repostas:')
+   
     for rk,rv in pv['resposta'].items():
         print(f'[{rk}]:{rv}')
-        
-        resposta_aluno = input('resposta:')
-'''print(perguntas)'''
+    
+    resposta_aluno = input('Resposta:')    
+    if resposta_aluno == pv['resposta_certa']:
+        print(pv['resposta_certa'])
+    else:
